@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @player.name %>
+</p>
+
+<p>
+  <b>Max hp:</b>
+  <%= @player.max_hp %>
+</p>
+
+<p>
+  <b>Hp:</b>
+  <%= @player.hp %>
+</p>
+
+<p>
+  <b>Attack:</b>
+  <%= @player.attack %>
+</p>
+
+<p>
+  <b>Defence:</b>
+  <%= @player.defence %>
+</p>
+
+<p>
+  <b>Herb:</b>
+  <%= @player.herb %>
+</p>
+
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Back', players_path %>

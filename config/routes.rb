@@ -1,4 +1,6 @@
 Mq::Application.routes.draw do
+  resources :enemies
+
   resources :players
 
   # The priority is based upon order of creation:

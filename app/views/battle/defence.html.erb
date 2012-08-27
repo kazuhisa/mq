@@ -1,0 +1,14 @@
+<p>
+  <%= @enemy.name%>の攻撃
+</p>
+<p>
+  <%= @attack_point %>のダメージを受けた
+</p>
+
+<p>
+  <% if @player.hp <= 0 %>
+    <%= @player.name %>は死んでしまった
+  <% else %>
+    <%= link_to "次へ", :action => :fight, :enemy_id => @enemy.id %>
+  <% end %>
+</p>

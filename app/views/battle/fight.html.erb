@@ -1,0 +1,14 @@
+<p>
+  <%= @player.name%>の攻撃
+</p>
+<p>
+  <%= @attack_point %>のダメージを与えた
+</p>
+
+<p>
+  <% if @enemy.hp <= 0 %>
+    <%= @enemy.name %>を倒した
+  <% else %>
+    <%= link_to "次へ", :action => :defence, :enemy_id => @enemy.id %>
+  <% end %>
+</p>

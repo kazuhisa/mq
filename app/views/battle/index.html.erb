@@ -4,3 +4,6 @@
 <p>
   <%= @enemy.name %>
 </p>
+<p>
+  <%= link_to "戦う", :action => :fight, :enemy_id => @enemy.id %>
+</p>

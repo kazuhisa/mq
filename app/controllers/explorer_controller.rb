@@ -4,4 +4,9 @@ class ExplorerController < ApplicationController
       redirect_to :controller => :battle
     end
   end
+
+  def start
+    @player.revival
+    redirect_to :action => :index
+  end
 end

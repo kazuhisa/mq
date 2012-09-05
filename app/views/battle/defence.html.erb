@@ -7,7 +7,8 @@
 
 <p>
   <% if @player.hp <= 0 %>
-    <%= @player.name %>は死んでしまった
+    <p><%= @player.name %>は死んでしまった</p>
+    <p><%= link_to "やり直す", :controller => :explorer, :action => :start %></p>
   <% else %>
     <%= link_to "次へ", :action => :fight, :enemy_id => @enemy.id %>
   <% end %>

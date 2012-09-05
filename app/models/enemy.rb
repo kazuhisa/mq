@@ -5,6 +5,7 @@ class Enemy < ActiveRecord::Base
   def self.enter(id)
     enemy = self.find(id)
     enemy.hp = enemy.max_hp
+    enemy.save!
     enemy
   end
 end

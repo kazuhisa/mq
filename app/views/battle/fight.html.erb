@@ -7,7 +7,8 @@
 
 <p>
   <% if @enemy.hp <= 0 %>
-    <%= @enemy.name %>を倒した
+    <p><%= @enemy.name %>を倒した</p>
+    <p><%= link_to "次へ", :controller => :battle, :action => :win %></p>
   <% else %>
     <%= link_to "次へ", :action => :defence, :enemy_id => @enemy.id %>
   <% end %>

@@ -22,4 +22,13 @@ class BattleController < ApplicationController
     @player.hp -= @attack_point
     @player.save
   end
+
+  def win
+    @player.attack += 1
+    @player.defence += 1
+    @player.herb += 1
+    @player.max_hp += 2
+    @player.save!
+    redirect_to :controller => :explorer, :action => :index
+  end
 end

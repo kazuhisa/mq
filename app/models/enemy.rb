@@ -1,5 +1,5 @@
 class Enemy < ActiveRecord::Base
-  attr_accessible :attack, :defence, :hp, :max_hp, :name
+  attr_accessible :attack, :defence, :hp, :max_hp, :name, :image
 
   # HPを回復させて登場
   def self.enter(id)

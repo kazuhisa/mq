@@ -7,6 +7,7 @@
     <th>Defence</th>
     <th>Hp</th>
     <th>Max hp</th>
+    <th>Image</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,6 +20,7 @@
     <td><%= enemy.defence %></td>
     <td><%= enemy.hp %></td>
     <td><%= enemy.max_hp %></td>
+    <td><%= enemy.image %></td>
     <td><%= link_to 'Show', enemy %></td>
     <td><%= link_to 'Edit', edit_enemy_path(enemy) %></td>
     <td><%= link_to 'Destroy', enemy, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -10,6 +10,10 @@
     <p><%= @player.name %>は死んでしまった</p>
     <p><%= link_to "やり直す", :controller => :explorer, :action => :start %></p>
   <% else %>
-    <%= link_to "次へ", :action => :fight, :enemy_id => @enemy.id %>
+    <%= link_to "戦う", :action => :fight, :enemy_id => @enemy.id %>
   <% end %>
+</p>
+
+<p>
+  <%= link_to "逃げる", :action => :escape, :enemy_id => @enemy.id %>
 </p>

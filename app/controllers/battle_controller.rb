@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class BattleController < ApplicationController
   def index
     @enemy = Enemy.all.choice
@@ -30,5 +31,16 @@ class BattleController < ApplicationController
     @player.max_hp += 2
     @player.save!
     redirect_to :controller => :explorer, :action => :index
+  end
+
+  def escape
+    @enemy = Enemy.find(params[:enemy_id])
+    if rand(2) == 1
+      flash[:notice] = "逃げることができた"
+      redirect_to :controller => :explorer, :action => :index
+    else
+      flash[:notice] = "逃げることができなかった"
+      redirect_to :action => :defence, :enemy_id => @enemy.id
+    end
   end
 end

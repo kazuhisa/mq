@@ -1,12 +1,17 @@
 <p>
   <%= image_tag @enemy.image %>
 </p>
-<p>
-  敵が現れた！
-</p>
-<p>
-  <%= @enemy.name %>
-</p>
+<div class="message">
+  <p>
+    <%= flash[:notice] %>
+  </p>
+  <p>
+    敵が現れた！
+  </p>
+  <p>
+    <%= @enemy.name %>
+  </p>
+</div>
 <p>
   <%= link_to "戦う", :action => :start, :enemy_id => @enemy.id %>
 </p>

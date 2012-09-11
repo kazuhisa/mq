@@ -1,7 +1,14 @@
 <p>
   <%= image_tag "bg-heigen.png" %>
 </p>
-探検中！
+<div class="message">
+  <p>
+    <%= flash[:notice] %>
+  </p>
+  <p>
+    探検中！
+  </p>
+</div>
 <p>
   <%= link_to "進む",:action => :index %>
 </p>

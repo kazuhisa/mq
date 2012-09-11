@@ -1,13 +1,17 @@
 <p>
   <%= image_tag @enemy.image %>
 </p>
-<p>
-  <%= @enemy.name%>の攻撃
-</p>
-<p>
-  <%= @attack_point %>のダメージを受けた
-</p>
-
+<div class="message">
+  <p>
+    <%= flash[:notice] %>
+  </p>
+  <p>
+    <%= @enemy.name%>の攻撃
+  </p>
+  <p>
+    <%= @attack_point %>のダメージを受けた
+  </p>
+</div>
 <p>
   <% if @player.hp <= 0 %>
     <p><%= @player.name %>は死んでしまった</p>

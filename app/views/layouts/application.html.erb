@@ -7,17 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p>
-  <%= flash[:notice] %>
-</p>
 <%= yield %>
 
-<p>
+<div class="status">
   <%= player_status %>
-</p>
+</div>
 
-<p>
+<div class="footer">
   当ゲームのグラフィックは<%= link_to "シアンのゆりかご", "http://cyanyurikago.web.fc2.com",:target => "_blank" %>様に掲載されているものを使用しています
-</p>
+</div>
 </body>
 </html>
